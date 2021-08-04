@@ -1,0 +1,93 @@
+(1)Add Member:
+localhost:9090/rest/member
+Http Method:POST
+Request:
+{
+"membername":"debadrisarkar",
+"memberemail":"debadrisarkarpcsglobal@gmail.com",
+"membermobile":"8697672001",
+"password":"password",
+"gender":"male"
+}
+
+Response:
+{
+    "status": "1",
+    "message": "Successfully Inserted",
+    "responsebody": {
+        "memberid": 29,
+        "membername": "debadrisarkar",
+        "memberemail": "debadrisarkarpcsglobal@gmail.com",
+        "membermobile": "8697672001",
+        "password": "password",
+        "gender": "male"
+    }
+}
+
+
+(2)Read Member:
+localhost:9090/rest/member-all
+Http Method:GET
+Response:
+{
+    "status": "1",
+    "message": "Success",
+    "responsebody": [
+        {
+            "memberid": 27,
+            "membername": "Debadri Sarkar",
+            "memberemail": "debadri.sarkar@gmail.com",
+            "membermobile": "9674165688",
+            "password": "801706",
+            "gender": "M"
+        },
+        {
+            "memberid": 29,
+            "membername": "debadrisarkar",
+            "memberemail": "debadrisarkarpcsglobal@gmail.com",
+            "membermobile": "8697672001",
+            "password": "password",
+            "gender": "male"
+        }
+    ]
+}
+
+
+(3)Update Member:
+localhost:9090/rest/member-update?id=26
+Http Method:PUT
+
+Request:
+{
+"membername":"debadrisarkar",
+"memberemail":"debadrisarkarpcsglobal@gmail.com",
+"membermobile":"8697672001",
+"password":"password",
+"gender":"male"
+}
+
+Response:
+{
+    "status": "1",
+    "message": "Successfully Updated",
+    "responsebody": {
+        "memberid": 27,
+        "membername": "debadrisarkar",
+        "memberemail": "debadrisarkarpcsglobal@gmail.com",
+        "membermobile": "8697672001",
+        "password": "password",
+        "gender": "male"
+    }
+}
+
+
+(4)Delete Member:
+localhost:9090/rest/member-delete/27
+Http Method:DELETE
+
+Response:
+{
+    "status": "1",
+    "message": "Successfully Deleted",
+    "responsebody": null
+}
